@@ -307,7 +307,8 @@
 			var/image/ping_image = image(icon = 'icons/effects/effects.dmi', icon_state = "sonar_ping", loc = our_turf, layer = OBFUSCATION_LAYER + 0.1)
 			pixel_shift_to_turf(ping_image, our_turf, T)
 			user << ping_image
-			QDEL_IN(ping_image, 8)
+			spawn(8)
+				qdel(ping_image)
 			var/direction = num2text(get_dir(user, L))
 			var/dist
 			if(text2num(direction))
