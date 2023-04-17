@@ -1,0 +1,6 @@
+author: meep109
+
+delete-after: True
+
+changes:
+  - rscadd: "Added an option for Diulszi in the Nralakk projector."
